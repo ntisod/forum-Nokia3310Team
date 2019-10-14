@@ -8,15 +8,14 @@
     <title>WSP1 Forum</title>
 </head>
 <body>
-    <!--Prototyp av index sidan för ett forum av Tim Rundström och Mario Barsum-->
-    <!--Header-->
+   
     <header>
-        <!--Header logo + name-->
+        
         <a class="header">
             <img src="nti-logo-black.png" alt="Black NTI logo" id="logo">
             <h1>NTI Forum</h1>
         </a>
-        <!--Header menu-->
+        
         <ul id="menu">
             <li><a>Nytt inlägg</a></li>
             <li><a>Mina inlägg</a></li>
@@ -26,11 +25,11 @@
         </ul>
     </header>
 
-    <!--Main section-->
+    
     <section>
         <h2>Inlägg</h2>
 
-        <!--Sorting and search form-->
+        
         <form action="" method="get">
             <input type="search" name="searchpost" placeholder="Sök" id="search">
             <select name="sortBy" id="sortBy">
@@ -39,13 +38,13 @@
             </select>
         </form>
 
-        <!--Side photos-->
+        
         <div class="sidePhotos">
             <img src="student-purple-hue.jpg" alt="stockphoto of female student" class="left">
             <img src="college-students-purple-hue.jpg" alt="stockphoto of college graduates" class="right">
         </div>
 
-        <!--Temporary post examples-->
+       
         <article>
             <a>
                 <hr>
@@ -61,7 +60,7 @@
             </a>
         </article>
         
-        <!--Page buttons-->
+        
         <div class="buttons">
             <a class="previous button">&#8249;</a>
             <a class="number button selected">1</a>

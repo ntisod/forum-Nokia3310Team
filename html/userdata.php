@@ -1,2 +1,2 @@
 
-    <form action="_self"
+    <form action="_self">
