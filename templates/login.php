@@ -48,13 +48,15 @@
             if (empty($_POST["passwordcheck"])) {
                 $passwordcheckErr = "lösenord är obligatoriskt";
             } 
-            else if ( $password !== $passwordcheck || $passwordcheck !== $password ) {
+            else 
+            {
+                $passwordcheck = test_input($_POST["passwordcheck"]);
+            }            
+            
+            if ( $password !== $passwordcheck /*|| $passwordcheck !== $password*/ ) {
                 $passwordcheckErr = "Skriv korrekt lösenord";
             }
-            else {
-                $passwordcheck = test_input($_POST["passwordcheck"]);
-            }
-
+ 
             echo $firstname . "<br>";
             echo $lastname . "<br>";
             echo $email . "<br>";
@@ -88,11 +90,11 @@
 
             <label for="password">Lösenord:</label><br>
             <input type="text" name="password" value="<?php echo $password;?>"><span class="error">*
-            <?php echo $password;?></span><br><br>  
+            <?php echo $passwordErr;?></span><br><br>  
 
             <label for="passwordcheck">Repetera lösenord:</label><br>
             <input type="text" name="passwordcheck" value="<?php echo $passwordcheck;?>"><span class="error">*
-            <?php echo $passwordcheck;?></span><br><br>  
+            <?php echo $passwordcheckErr;?></span><br><br>  
 
             <input type="submit" value="Registrera">
         </fieldset>
