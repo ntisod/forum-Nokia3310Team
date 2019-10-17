@@ -86,12 +86,12 @@
             <input type="email" name="email" value="<?php echo $email;?>"><span class="error">*
             <?php echo $emailErr;?></span><br><br>  
 
-            <label for="lösenord">Lösenord:</label><br>
-            <input type="password" name="lösenord" value="<?php echo $password;?>"><span class="error">*
+            <label for="password">Lösenord:</label><br>
+            <input type="text" name="password" value="<?php echo $password;?>"><span class="error">*
             <?php echo $password;?></span><br><br>  
 
-            <label for="lösenord">Repetera lösenord:</label><br>
-            <input type="password" name="lösenord" value="<?php echo $passwordcheck;?>"><span class="error">*
+            <label for="passwordcheck">Repetera lösenord:</label><br>
+            <input type="text" name="passwordcheck" value="<?php echo $passwordcheck;?>"><span class="error">*
             <?php echo $passwordcheck;?></span><br><br>  
 
             <input type="submit" value="Registrera">
