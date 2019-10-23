@@ -76,6 +76,7 @@
                 $target = $_SERVER["PHP_SELF"];
             }
 
+            
             echo $firstname . "<br>";
             echo $lastname . "<br>";
             echo $email . "<br>";
