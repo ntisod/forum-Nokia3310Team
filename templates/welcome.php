@@ -13,15 +13,16 @@
 
 <?php
 
+if (!err){
 
+    date_default_timezone_set("Europe/Stockholm");
 
+    echo "<h1>Välkommen {$email}!</h1>\n";
 
-function test_input($data) {
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return $data;
-        }
+    echo "<p>Du skapade kontot " . date("Y-m-d H:i:s") . "</p>";
+}else{
+    require '../templates/login.php';
+}
         ?>
 
 <?php require '../templates/footer.php'; ?>

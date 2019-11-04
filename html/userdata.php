@@ -1,2 +1,0 @@
-
-    <form action="_self">
