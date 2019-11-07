@@ -13,7 +13,7 @@
 
 <?php
 
-if (!err){
+if (!$err){
 
     date_default_timezone_set("Europe/Stockholm");
 
