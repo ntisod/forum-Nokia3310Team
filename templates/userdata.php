@@ -1,4 +1,4 @@
-<form  class="w3-container" method="post">
+<form  class="w3-container flex-container"  method="post">
         <fieldset>
             <legend>Personliga uppgifter</legend>
             <label for="firstname">Förnamn:</label><br>

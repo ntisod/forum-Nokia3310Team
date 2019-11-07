@@ -74,7 +74,7 @@
                 require "welcome.php";
             }
             else{
-                require $_SERVER["PHP_SELF"];
+                require '../templates/userdata.php';
             }
             
             echo $firstname . "<br>";

@@ -13,7 +13,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
 </style>    
 <body>
-<div class="w3-top">
+<div class="w3-top flex-container">
   <div class="w3-bar w3-theme w3-top w3-left-align w3-medium">
    
     <a href="https://www.ntigymnasiet.se/sodertalje/" class="w3-bar-item w3-button w3-theme-l1"><img width="105px" height="25" src="https://www.ntigymnasiet.se/wp-content/themes/nti/img/nti_logo_white.svg" alt=""></a>

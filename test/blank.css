@@ -5,3 +5,7 @@
 form{
 size: 50%;
 }
+
+.flex-container {
+    display: flex;
+}
