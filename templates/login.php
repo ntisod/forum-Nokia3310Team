@@ -17,7 +17,6 @@
         $firstnameErr = $lastnameErr = $emailErr = $passwordErr = $passwordcheckErr = "";
         $firstname = $lastname = $email = $password = $passwordcheck = "";
         $err = false;
-        $target = "";
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -77,15 +76,13 @@
                 require '../templates/userdata.php';
             }
             
-            echo $firstname . "<br>";
-            echo $lastname . "<br>";
-            echo $email . "<br>";
-            echo $password . "<br>";
-            echo $passwordcheck . "<br>";  
               
         }
-        else{
+        else if ($firstname == ""){
             require '../templates/userdata.php';
+        }
+        else{
+            require '../templates/welcome.php';
         }
 
         function test_input($data){

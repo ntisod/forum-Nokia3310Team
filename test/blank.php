@@ -15,17 +15,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 <body>
 
 <!-- Navbar -->
-<div class="w3-top" class="flex-container">
-  <div class="w3-bar w3-theme w3-top w3-left-align w3-medium">
-   
-    <a href="https://www.ntigymnasiet.se/sodertalje/" class="w3-bar-item w3-button w3-theme-l1"><img width="105px" height="25" src="https://www.ntigymnasiet.se/wp-content/themes/nti/img/nti_logo_white.svg" alt=""></a>
-    <a href="#" class="w3-bar-item w3-button w3-hover-white">Ny inlägg</a>
-    <a href="#" class="w3-bar-item w3-button w3-hover-white">Följande</a>
-    <a href="../templates/login.php" class="w3-bar-item w3-button w3-hover-white">logga in / skapa konto</a>
-    <a href="#" class="w3-bar-item w3-button w3-hover-white">Min inlägg</a>
-    <a href="#" class="w3-bar-item w3-button w3-hover-white">inlägg</a>
-  </div>
-</div>
+<?php  require '../templates/header.php'; ?>
 
 <div class="w3-main" class="flex-container" >
 
@@ -81,16 +71,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
 
 </div>
-<footer id="myFooter">
-    <div class="w3-container w3-theme-l2 w3-padding-12">
-      <h4>Footer</h4>
-    </div>
-
-    <div class="w3-container w3-theme-l1">
-      <?php
-      echo "<p>Copyright &copy; " . date("Y") . " NTI Gymnasiet Södertälje</p>";?>
-    </div>
-  </footer>
+<?php  require '../templates/footer.php'; ?>
 
 </body>
 </html>

@@ -19,9 +19,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <a href="https://www.ntigymnasiet.se/sodertalje/" class="w3-bar-item w3-button w3-theme-l1"><img width="105px" height="25" src="https://www.ntigymnasiet.se/wp-content/themes/nti/img/nti_logo_white.svg" alt=""></a>
     <a href="#" class="w3-bar-item w3-button w3-hover-white">Ny inlägg</a>
     <a href="#" class="w3-bar-item w3-button w3-hover-white">Följande</a>
-    <a href="../templates/login.php" class="w3-bar-item w3-button w3-hover-white">logga in / skapa konto</a>
+    <a href="../templates/login.php" class="w3-bar-item w3-button w3-hover-white">Sign in</a>
     <a href="#" class="w3-bar-item w3-button w3-hover-white">Min inlägg</a>
-    <a href="#" class="w3-bar-item w3-button w3-hover-white">inlägg</a>
   </div>
 </div>
 </body>

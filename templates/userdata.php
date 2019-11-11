@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../test/blank.css">
     <title>Userdata</title>
 </head>
-<form  class=" flex-container"  method="post">
+<form  class="flex-container w3-row padtop w3-display-middle"  method="post">
         <fieldset>
             <legend>Personliga uppgifter</legend>
             <label for="firstname">Förnamn:</label><br>
