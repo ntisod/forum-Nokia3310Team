@@ -21,9 +21,9 @@
 
             date_default_timezone_set("Europe/Stockholm");
 
-            $myfile = fopen("information.txt", "a+");
+            $myfile = fopen("data.txt", "a+");
 
-            fwrite($myfile, date("Y-m-d H:i:s") . "\t" . $firstname . "\t" . $email . "\t" . $lastname . "\t" . $password . "\t");
+            fwrite($myfile, date("Y-m-d H:i:s") . "\t". $firstname . "\t" . $lastname . "\t" . $email . "\t" . $password . "\t" . "\n");
 
             fclose($myfile);
             
