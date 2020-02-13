@@ -4,12 +4,19 @@ session_start();
 // initiera variabler
 $username = "";
 $email    = "";
+$password_1 = "";
+$password_2 = "";
 $errors = array(); 
-$algo = PASSWORD_BCRYPT;
-$options = 'salt';
 
-// kopplas till data bas
-$db = mysqli_connect('localhost', 'root', '', 'registration');
+
+
+// kopplas till data bas, ändra sen!!!!!!
+$db = mysqli_connect('localhost', 'phpuser', 'test12345', 'nti-forum-db');
+
+// kollar om det finns koppling
+if (!$db) {
+  die("Connection failed: " . mysqli_connect_error());
+}
 
 // Registrera användare
 if (isset($_POST['reg_user'])) {
@@ -45,10 +52,10 @@ if (isset($_POST['reg_user'])) {
 
   
   if (count($errors) == 0) {
-    $password = password_hash ($password_1, $algo, [$options]); //encryptpar lösenord med bcrypt och salt
-
+    $password_1 = password_hash($password_1, PASSWORD_DEFAULT); //encryptpar lösenord med bcrypt
+    
   	$query = "INSERT INTO users (username, email, password) 
-  			  VALUES('$username', '$email', '$password')";
+  			  VALUES('$username', '$email', '$password_1')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "Du är loggad in";
@@ -59,7 +66,7 @@ if (isset($_POST['reg_user'])) {
 // Koden som loggar in användaren
 if (isset($_POST['login_user'])) {
     $username = mysqli_real_escape_string($db, $_POST['username']);
-    $password = mysqli_real_escape_string($db, $_POST['password']);
+    $password_1 = mysqli_real_escape_string($db, $_POST['password']);
   
     if (empty($username)) {
         array_push($errors, "Användarenamn krävs");
@@ -69,22 +76,35 @@ if (isset($_POST['login_user'])) {
     }
   
     if (count($errors) == 0) {
-        $querypass = "SELECT * FROM users WHERE password='$password'";
-        $check =  password_verify ( $password, $querypass);
+        $querypass = "SELECT password FROM users WHERE username='$username'";
+
+        $passresult = mysqli_query($db, $querypass);
+
+        $fetchq = mysqli_fetch_array($passresult);
+
+        $passwordnow = array_values($fetchq)[0];
+
+        echo $passwordnow;
+
+        $stripped = str_replace(' ', '', $passwordnow);
+
+        $check =  password_verify($password, $stripped);
+
         if ($check){
         $query = "SELECT * FROM users WHERE username='$username'";
         $results = mysqli_query($db, $query);
+
         if (mysqli_num_rows($results) == 1) {
           $_SESSION['username'] = $username;
           $_SESSION['success'] = "Du är loggad in";
           header('location: index.php');
         }else {
-            array_push($errors, "Fel användarnamn/lösenord kombination");
+            array_push($errors, "Fel användarnamn/lösenord kombination 1");
         }
-      }else{
-        array_push($errors, "Fel användarnamn/lösenord kombination");
-    }
-    }
-  }
+         }else{
+          array_push($errors, "Fel användarnamn/lösenord kombination 2");
+         }
+        }
+      }
   
   ?>

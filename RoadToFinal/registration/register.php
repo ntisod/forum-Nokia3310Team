@@ -13,7 +13,7 @@
   <form method="post" action="register.php">
   	<?php include('errors.php'); ?>
   	<div class="input-group">
-  	  <label>Username</label>
+  	  <label>Användare namn</label>
   	  <input type="text" name="username" value="<?php echo $username; ?>">
   	</div>
   	<div class="input-group">
@@ -22,11 +22,11 @@
   	</div>
   	<div class="input-group">
   	  <label>Lösenord</label>
-  	  <input type="password" name="password_1">
+  	  <input type="password" name="password_1" value="<?php echo $password_1; ?>">
   	</div>
   	<div class="input-group">
   	  <label>Bekräfta lösenord</label>
-  	  <input type="password" name="password_2">
+  	  <input type="password" name="password_2" value="<?php echo $password_2; ?>">
   	</div>
   	<div class="input-group">
   	  <button type="submit" class="btn" name="reg_user">Register</button>
