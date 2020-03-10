@@ -71,7 +71,7 @@ if (isset($_POST['login_user'])) {
     if (empty($username)) {
         array_push($errors, "Användarenamn krävs");
     }
-    if (empty($password)) {
+    if (empty($password_1)) {
         array_push($errors, "Lösenord krävs");
     }
   
@@ -88,7 +88,7 @@ if (isset($_POST['login_user'])) {
 
         $stripped = str_replace(' ', '', $passwordnow);
 
-        $check =  password_verify($password, $stripped);
+        $check =  password_verify($password_1, $stripped);
 
         if ($check){
         $query = "SELECT * FROM users WHERE username='$username'";
