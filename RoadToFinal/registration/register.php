@@ -9,7 +9,7 @@
   <div class="header">
   	<h2>Registrera</h2>
   </div>
-	
+	<!-- form for reg-->
   <form method="post" action="register.php">
   	<?php include('errors.php'); ?>
   	<div class="input-group">
