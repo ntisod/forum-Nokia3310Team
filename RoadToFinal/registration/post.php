@@ -1,5 +1,5 @@
 <?php 
-
+include("postreg.php");
 session_start();
 
 if (!isset($_SESSION['username'])) {
@@ -27,10 +27,10 @@ if (isset($_GET['logout'])) {
   	<h2>Inlägg</h2>
   </div>
 
-<form action ="post_action.php"  method="POST" accept-charset="utf-8">
+<form action ="postreg.php"  method="POST" accept-charset="utf-8">
     <h3>Topic<br><input name="topic" type="text"></h3>
     <p>Meddelande<br><textarea name="content" rows="5" cols="50"></textarea></p>
-    <p><input type="submit" value="Submit"></p>
+    <p><input type="submit" value="Submit" name="post_user"></p>
 </form>
 
 <?php require 'footer.php'; ?>
