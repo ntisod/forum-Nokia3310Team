@@ -96,6 +96,7 @@ if (isset($_POST['login_user'])) {
 
         if (mysqli_num_rows($results) == 1) {
           $_SESSION['username'] = $username;
+          $_SESSION['email'] = $email;
           $_SESSION['success'] = "Du är loggad in";
           header('location: index.php');
         }else {

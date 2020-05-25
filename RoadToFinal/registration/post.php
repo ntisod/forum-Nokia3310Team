@@ -18,6 +18,10 @@ if (isset($_GET['logout'])) {
 <head>
   <title>NTI Forum</title>
   <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <?php require 'header.php'; ?>
@@ -27,10 +31,10 @@ if (isset($_GET['logout'])) {
   	<h2>Inlägg</h2>
   </div>
 
-<form action ="postreg.php"  method="POST" accept-charset="utf-8">
+<form method="post" action="post.php"  accept-charset="utf-8">
     <h3>Topic<br><input name="topic" type="text"></h3>
-    <p>Meddelande<br><textarea name="content" rows="5" cols="50"></textarea></p>
-    <p><input type="submit" value="Submit" name="post_user"></p>
+    <p>Meddelande<br><textarea name="content" type="text" rows="5" cols="50"></textarea></p>
+    <p><input type="submit"  name="post_user"></p>
 </form>
 
 <?php require 'footer.php'; ?>
